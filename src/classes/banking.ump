@@ -1,0 +1,86 @@
+class Person{
+  abstract;
+ name;
+ address;
+ phoneNumber;
+ 
+ }
+
+class Employee{
+  
+  int employeeID;
+isA Person;
+  * -- 1 Division;
+  * -- 0..1 Manager;
+}
+
+class Client
+{
+  
+   isA Person;
+  * -- * Employee;
+}
+
+class Account{
+  abstract;
+ Integer accountNumber;
+ Float balance;
+ Float creditLimit;
+Float interestRate;
+Float monthlyFee;
+privileges;
+ openDate;
+ closedDate;
+* -- 1 Branch;
+  0..1 -- 1 AccountProxy;
+}
+
+class CreditCardAccount{
+  
+    
+  expireDate;
+isA Account;
+}
+
+class MortgageAccount {
+  
+    
+  isA Account;
+}
+
+class Branch {
+  
+   isA Division;
+	address;
+ branchNumber;
+
+ }
+
+class ChequingAccount
+{
+   
+  isA Account;
+}
+
+class CreditCard
+{
+    Boolean openForInternet;
+int cardNumber;
+1..* -- 1 CreditCardAccount;
+}
+
+class Division
+{
+}
+
+class Manager
+{
+  isA Employee;
+}
+
+class AccountProxy
+{
+     
+* -- 1..2 Client;
+}
+
